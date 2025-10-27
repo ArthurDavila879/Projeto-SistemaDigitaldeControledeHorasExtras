@@ -34,7 +34,7 @@ int main(){
                 int id;
                 float horas;
                 printf("\n===== REGISTRAR HORAS EXTRAS =====\n");
-                printf("\nDigite o ID do funcionário: ");
+                printf("\nDigite o ID do funcionario: ");
                 scanf("%d", &id);
                 limpar_buffer();
                 printf("Digite a quantidade de horas extras: ");
@@ -60,16 +60,16 @@ int main(){
 
             case 4: {
                 int id, decisao;
-                printf("\nDigite o ID do funcionário: ");
+                printf("\nDigite o ID do funcionario: ");
                 scanf("%d", &id);
                 if (id > 0 && id <= total_funcionarios) {
                     printf("1 - Aprovar | 2 - Reprovar: ");
                     scanf("%d", &decisao);
                     if (decisao == 1) funcionarios[id - 1].aprovado = 1;
                     else { funcionarios[id - 1].aprovado = 2; }
-                    printf("\nDecisão registrada com sucesso!\n");
+                    printf("\nDecisao registrada com sucesso!\n");
                 } else {
-                    printf("\nFuncionário não encontrado.\n");
+                    printf("\nFuncionario nao encontrado.\n");
                 }
                 break;
             }
@@ -84,7 +84,7 @@ int main(){
 
             }
             default:
-                printf("\nOpção inválida. Tente novamente.\n");
+                printf("\nOpcao invalida. Tente novamente.\n");
                 break;
         }
 

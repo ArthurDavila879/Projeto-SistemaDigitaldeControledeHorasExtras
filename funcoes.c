@@ -44,7 +44,7 @@ void adicionarHorasExtras(struct funcionario funcionarios[], int n, int id, floa
     }
     else
     {
-        printf("\nFuncionário não encontrado.\n");
+        printf("\nFuncionario nao encontrado.\n");
     }
 
 }
