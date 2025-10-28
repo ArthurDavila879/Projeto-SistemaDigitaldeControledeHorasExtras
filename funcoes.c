@@ -65,7 +65,7 @@ void adicionarHorasExtras(struct funcionario funcionarios[], int n, int id, floa
 
 void relatorio(struct funcionario funcionarios[], int n)
 {
-    FILE *arquivo = fopen("dados.txt", "a"); 
+    FILE *arquivo = fopen("dados.txt", "w"); 
     if (arquivo == NULL)
     {
         printf("\nErro ao abrir o arquivo!\n");
