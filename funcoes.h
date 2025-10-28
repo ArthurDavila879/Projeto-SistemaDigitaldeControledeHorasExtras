@@ -13,7 +13,7 @@ struct funcionario
 };
 
 void limpar_buffer();
-void adicionarFuncionario(struct funcionario funcionarios[]);
+int adicionarFuncionario(struct funcionario funcionarios[], int total_funcionarios);
 void adicionarHorasExtras(struct funcionario funcionarios[], int n, int id, float horas);
 void relatorio(struct funcionario funcionarios[], int n);
 

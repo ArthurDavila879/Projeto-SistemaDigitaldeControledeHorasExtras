@@ -5,8 +5,11 @@
 
 int main(){
     printf("=== Sistema de Gerenciamento de Funcionarios ===\n");    
+
     struct funcionario funcionarios[100];
-      int opcao;
+    int opcao;
+    int total_funcionarios = 0;
+
     do {
         printf("\n===== SISTEMA DE CONTROLE DE HORAS EXTRAS =====\n");
         printf("1. Cadastrar funcionario\n");
@@ -19,16 +22,11 @@ int main(){
         scanf("%d", &opcao);
         limpar_buffer();
 
-        int total_funcionarios = 0;
-        
         switch (opcao) {
             case 1: {
-                adicionarFuncionario(funcionarios);
-                total_funcionarios++;
-                break;
-                }
-            
-            
+               total_funcionarios = adicionarFuncionario(funcionarios, total_funcionarios);
+               break;
+            }
 
             case 2: {
                 int id;
@@ -66,7 +64,7 @@ int main(){
                     printf("1 - Aprovar | 2 - Reprovar: ");
                     scanf("%d", &decisao);
                     if (decisao == 1) funcionarios[id - 1].aprovado = 1;
-                    else { funcionarios[id - 1].aprovado = 2; }
+                    else funcionarios[id - 1].aprovado = 2;
                     printf("\nDecisao registrada com sucesso!\n");
                 } else {
                     printf("\nFuncionario nao encontrado.\n");
@@ -78,17 +76,18 @@ int main(){
                 relatorio(funcionarios, total_funcionarios);
                 break;
             }
-            case 0:{
+
+            case 0: {
                 printf("\nSaindo do sistema...\n");
                 break;
-
             }
+
             default:
                 printf("\nOpcao invalida. Tente novamente.\n");
                 break;
         }
 
-        }while (opcao != 0);
+    } while (opcao != 0);
+
     return 0;
 }
-
