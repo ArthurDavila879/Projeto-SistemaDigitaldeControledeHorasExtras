@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar Sistema MySQL",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "main.c",
+        "funcoes.c",
+        "-o",
+        "sistema_funcionarios.exe",
+
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compila o sistema de funcionarios com suporte ao MySQL."
+    },
+    {
+      "label": "Executar Sistema",
+      "type": "shell",
+      "command": "./sistema_funcionarios.exe",
+      "dependsOn": "Compilar Sistema MySQL",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}

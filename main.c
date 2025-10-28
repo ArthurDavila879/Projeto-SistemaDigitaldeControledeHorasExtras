@@ -2,8 +2,11 @@
 #include "funcoes.h"
 #include <locale.h>
 #include <stdlib.h>
-
+#include <string.h>
+#include <locale.h>
 int main(){
+    setlocale(LC_ALL, "");
+
     printf("=== Sistema de Gerenciamento de Funcionarios ===\n");    
 
     struct funcionario funcionarios[100];
