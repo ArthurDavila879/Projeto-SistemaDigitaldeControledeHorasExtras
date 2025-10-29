@@ -1,4 +1,4 @@
-#include <stdio.h>
+
 #include "funcoes.h"
 #include <locale.h>
 #include <stdlib.h>
