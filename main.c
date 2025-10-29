@@ -5,7 +5,7 @@
 #include <string.h>
 #include <locale.h>
 int main(){
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "")
 
     printf("=== Sistema de Gerenciamento de Funcionarios ===\n");    
 
