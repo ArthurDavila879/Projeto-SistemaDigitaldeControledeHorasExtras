@@ -1,4 +1,11 @@
-
 *.exe
 *.o
 *.obj
+programa
+main
+
+# Replit files
+.replit
+.config/
+.upm/
+.cache/
