@@ -3,9 +3,12 @@
 *.obj
 programa
 main
+replit.md
+Makefile
 
 # Replit files
 .replit
 .config/
 .upm/
 .cache/
+.ccls-cache
