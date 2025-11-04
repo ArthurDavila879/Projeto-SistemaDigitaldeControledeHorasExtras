@@ -46,7 +46,7 @@ int adicionarFuncionario(struct funcionario funcionarios[], int total_funcionari
         printf("\nFuncionario cadastrado com sucesso!\n");
     }
 
-    return total_funcionarios; // devolve o total atualizado
+    return total_funcionarios; // devolve o total 
 }
 
 void adicionarHorasExtras(struct funcionario funcionarios[], int n, int id, float horas)
@@ -94,4 +94,23 @@ void relatorio(struct funcionario funcionarios[], int n)
 
     fclose(arquivo);
     printf("\nRelatorio gerado com sucesso no arquivo 'dados.txt'!\n");
+    
+}
+int verificargestor(){
+    char nome[100];char senha[20];
+    char nomelogin[100] = {"gestor"};char senhalogin[20] = {"gestor"};
+
+    limpar_buffer();
+    printf("Insira o nome do gestor: ");
+    fgets(nome, sizeof(nome), stdin);
+    printf("Insira a senha: ");
+    fgets(senha,sizeof(senha),stdin);
+    int verific1 = strcmp(senha, senhalogin);
+    int verific2 = strcmp(nome, nomelogin);
+    
+    if(verific1 > 0 && verific2 > 0)
+        {printf("Login Corretor");
+        return 0;}
+    else{return 1;}
+        
 }
