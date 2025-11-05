@@ -114,10 +114,7 @@ int main(){
 
                   } 
     
-              } while (opcao2 != 0);
-      }
-
-    } while (escolha == 0 || escolha == 1);
-    
+           }
+} while (opcao2 != 0);
     return 0;
-}
+ }
