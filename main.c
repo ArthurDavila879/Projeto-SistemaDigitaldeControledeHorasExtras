@@ -58,62 +58,66 @@ int main(){
           }
 
           
-          printf("\n1. Listar registros\n");
-          printf("2. Aprovar/Reprovar horas extras\n");
-          printf("3. Gerar relatorio final\n");
-          printf("0. Sair\n");
-          printf("Escolha uma opcao: ");
-          scanf("%d", &opcao2);
-          limpar_buffer();
+          do {
+                printf("\n===== MENU DO GESTOR =====\n");
+                printf("1. Listar registros\n");
+                printf("2. Aprovar/Reprovar horas extras\n");
+                printf("3. Gerar relatorio final\n");
+                printf("0. Voltar ao menu inicial\n");
+                printf("Escolha uma opcao: ");
+                scanf("%d", &opcao2);
+                limpar_buffer();
 
-          switch(opcao2){
-          case 1: {
-                      printf("\n===== LISTA DE REGISTROS =====\n");
-                      for (int i = 0; i < total_funcionarios; i++) {
-                          printf("ID: %d | Nome: %s | Horas Extras: %.2f | Valor Hora: R$%.2f | Status: ",
-                              funcionarios[i].id,
-                              funcionarios[i].nome,
-                              funcionarios[i].horas_extras,
-                              funcionarios[i].valor_hora);
-                          if (funcionarios[i].aprovado == 0) printf("Pendente\n");
-                          else if (funcionarios[i].aprovado == 1) printf("Aprovado\n");
-                          else printf("Reprovado\n");
-                      }
-                      break;
+              switch(opcao2){
+                    case 1: {
+                                printf("\n===== LISTA DE REGISTROS =====\n");
+                                for (int i = 0; i < total_funcionarios; i++) {
+                                    printf("ID: %d | Nome: %s | Horas Extras: %.2f | Valor Hora: R$%.2f | Status: ",
+                                        funcionarios[i].id,
+                                        funcionarios[i].nome,
+                                        funcionarios[i].horas_extras,
+                                        funcionarios[i].valor_hora);
+                                    if (funcionarios[i].aprovado == 0) printf("Pendente\n");
+                                    else if (funcionarios[i].aprovado == 1) printf("Aprovado\n");
+                                    else printf("Reprovado\n");
+                                }
+                                break;
                   }
 
-                  case 2: {
-                      int id, decisao;
-                      printf("\nDigite o ID do funcionario: ");
-                      scanf("%d", &id);
-                      if (id > 0 && id <= total_funcionarios) {
-                          printf("1 - Aprovar | 2 - Reprovar: ");
-                          scanf("%d", &decisao);
-                          if (decisao == 1) funcionarios[id - 1].aprovado = 1;
-                          else funcionarios[id - 1].aprovado = 2;
-                          printf("\nDecisao registrada com sucesso!\n");
-                      } else {
-                          printf("\nFuncionario nao encontrado.\n");
-                      }
-                      break;
+                      case 2: {
+                            int id, decisao;
+                            printf("\nDigite o ID do funcionario: ");
+                            scanf("%d", &id);
+                            if (id > 0 && id <= total_funcionarios) {
+                                printf("1 - Aprovar | 2 - Reprovar: ");
+                                scanf("%d", &decisao);
+                                if (decisao == 1) funcionarios[id - 1].aprovado = 1;
+                                else funcionarios[id - 1].aprovado = 2;
+                                printf("\nDecisao registrada com sucesso!\n");
+                            } else {
+                                printf("\nFuncionario nao encontrado.\n");
+                            }
+                            break;
                   }
+                      case 3: {
+                            relatorio(funcionarios, total_funcionarios);
+                            break;
+                        } 
+                        case 0: {
+                            printf("\nVoltando ao menu inicial...\n");
+                            break;
+                        }
 
-                  case 3: {
-                      relatorio(funcionarios, total_funcionarios);
-                      break;
+                        default:
+                            printf("\nOpcao invalida. Tente novamente.\n");
+                            break;
+
                   } 
-                  case 0: {
-                      printf("\nSaindo do sistema...\n");
-                      break;
-                  }
-        
-                  default:
-                      printf("\nOpcao invalida. Tente novamente.\n");
-                      break;
     
-           }
-      } 
+              } while (opcao2 != 0);
+      }
 
-      }while (opcao != 0);
+    } while (escolha == 0 || escolha == 1);
+    
     return 0;
- }
+}
