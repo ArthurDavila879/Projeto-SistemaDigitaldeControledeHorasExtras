@@ -108,7 +108,7 @@ int verificargestor(){
     int verific1 = strcmp(senha, senhalogin);
     int verific2 = strcmp(nome, nomelogin);
     
-    if(verific1 > 0 && verific2 > 0)
+    if(verific1 == 0 && verific2 == 0)
         {printf("Login correto");
         return 0;}
     else{
