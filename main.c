@@ -47,7 +47,7 @@ int main(){
                     break;
                 }
         }}
-        
+     do{
       if(escolha == 1){
           int verificacao = verificargestor();
           if(verificacao == 1 ){
@@ -58,7 +58,7 @@ int main(){
           printf("\n1. Listar registros\n");
           printf("2. Aprovar/Reprovar horas extras\n");
           printf("3. Gerar relatorio final\n");
-          printf("4. Voltar ao login");
+          printf("4. Voltar a tela inicial\n");
           printf("0. Sair\n");
           printf("Escolha uma opcao: ");
           scanf("%d", &opcao2);
@@ -99,20 +99,19 @@ int main(){
                   case 3: {
                       relatorio(funcionarios, total_funcionarios);
                       break;
-                  }
-
+                  } 
                   case 0: {
                       printf("\nSaindo do sistema...\n");
                       break;
                   }
-
+        
                   default:
                       printf("\nOpcao invalida. Tente novamente.\n");
                       break;
     
            }
-      }
+      } 
 
-          }while (opcao != 0);
+     }while(opcao2 !=4); }while (opcao != 0);
     return 0;
  }

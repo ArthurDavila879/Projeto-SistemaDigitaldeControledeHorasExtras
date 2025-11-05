@@ -8,7 +8,7 @@ struct funcionario
     char nome[50];
     float horas_extras;
     float valor_hora;
-    char data[11];
+    char data[12];
     int aprovado; // 1 aprovado 2 reprovado
 };
 
