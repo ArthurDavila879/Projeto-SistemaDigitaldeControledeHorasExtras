@@ -83,6 +83,7 @@ int main(){
                         break;
                     }
                     case 2: {
+                        tentar_cadastro();
                         int id, decisao;
                         printf("\nDigite o ID do funcionario: ");
                         scanf("%d", &id);
