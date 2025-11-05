@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "funcoes.h"
-
+#include <time.h>
+#include <stdlib.h>
 void limpar_buffer()
 {
     int c;
