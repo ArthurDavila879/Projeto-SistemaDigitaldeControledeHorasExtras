@@ -26,7 +26,7 @@ int main(){
             printf("2. Registrar horas extras\n");
             scanf("%d", &opcao);
             limpar_buffer();
-            
+
             switch (opcao) {
                 case 1: {
                     total_funcionarios = adicionarFuncionario(funcionarios, total_funcionarios);
