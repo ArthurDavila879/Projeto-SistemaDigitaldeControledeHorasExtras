@@ -3,7 +3,7 @@
 #define FUNCOES_H
 
 struct funcionario
-{   
+{
     int id;
     char nome[50];
     float horas_extras;
@@ -17,5 +17,8 @@ int adicionarFuncionario(struct funcionario funcionarios[], int total_funcionari
 void adicionarHorasExtras(struct funcionario funcionarios[], int n, int id, float horas);
 void relatorio(struct funcionario funcionarios[], int n);
 int verificargestor();
-void tentar_cadastro();
+int tentar_aprovar();
+void exibir_menu_gestor();
+void exibir_menu_funcionario();
+void exibir_menu_principal();
 #endif
