@@ -17,5 +17,5 @@ int adicionarFuncionario(struct funcionario funcionarios[], int total_funcionari
 void adicionarHorasExtras(struct funcionario funcionarios[], int n, int id, float horas);
 void relatorio(struct funcionario funcionarios[], int n);
 int verificargestor();
-
+void tentar_cadastro();
 #endif
