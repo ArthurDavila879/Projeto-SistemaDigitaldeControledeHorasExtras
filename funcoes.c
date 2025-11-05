@@ -133,15 +133,15 @@ void tentar_cadastro() {
     
         printf("--- VERIFICACAO DE HORA ---\n");
         printf("Hora atual (em seu fuso horario): %02d:%02d\n", hora_atual, (info_tempo->tm_min)-3);
-        printf("Cadastro permitido. O limite de %02d:00 ainda nao foi atingido.\n", HORA_LIMITE);
+        printf("Aprovação permitida. O limite de %02d:00 ainda nao foi atingido.\n", HORA_LIMITE);
         
-        printf("\nRotina de cadastro sendo executada...\n");
+        printf("\nRotina de aprovação sendo executada...\n");
 
     } else {
         
         printf("--- VERIFICACAO DE HORA ---\n");
         printf("Hora atual (em seu fuso horario): %02d:%02d\n", hora_atual, info_tempo->tm_min);
-        printf("Cadastro negado. O horario limite de %02d:00 foi ultrapassado.\n", HORA_LIMITE);
+        printf("Aprovação negada. O horario limite de %02d:00 foi ultrapassado.\n", HORA_LIMITE);
 
     }
 }
