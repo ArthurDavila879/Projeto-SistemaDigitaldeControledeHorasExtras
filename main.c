@@ -56,9 +56,9 @@ int main(){
                 } while(verificacao == 1);
             }
 
-            // Loop do menu do gestor
+            // Loop do menu do gestor, podendo listar, aprovar/reprovar e gerar relatorio;
             do {
-                printf("\n===== MENU DO GESTOR =====\n");
+                printf("\n\n===== MENU DO GESTOR =====\n");
                 printf("1. Listar registros\n");
                 printf("2. Aprovar/Reprovar horas extras\n");
                 printf("3. Gerar relatorio final\n");
