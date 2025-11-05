@@ -47,7 +47,8 @@ int main(){
                     break;
                 }
         }}
-     do{
+
+        //entrando como gestor podendo listar,aprovar e gerar relatorios
       if(escolha == 1){
           int verificacao = verificargestor();
           if(verificacao == 1 ){
@@ -55,10 +56,12 @@ int main(){
                 verificacao = verificargestor();}
                   while(verificacao ==1);
           }
+
+          
           printf("\n1. Listar registros\n");
           printf("2. Aprovar/Reprovar horas extras\n");
           printf("3. Gerar relatorio final\n");
-          printf("4. Voltar a tela inicial\n");
+       
           printf("0. Sair\n");
           printf("Escolha uma opcao: ");
           scanf("%d", &opcao2);
@@ -112,6 +115,6 @@ int main(){
            }
       } 
 
-     }while(opcao2 !=4); }while (opcao != 0);
+      }while (opcao != 0);
     return 0;
  }

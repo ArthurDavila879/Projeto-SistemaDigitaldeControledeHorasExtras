@@ -13,14 +13,12 @@ int adicionarFuncionario(struct funcionario funcionarios[], int total_funcionari
 {
     int escolha;
 
-    while (1)
+    while (escolha !=0)
     {
         printf("\nDeseja adicionar um novo funcionario? (1 - Sim | 0 - Nao): ");
         scanf("%d", &escolha);
         limpar_buffer();
-
-        if (escolha == 0)
-            break;
+        if (escolha == 0)break;
 
         int n = total_funcionarios; // começa do total atual
         funcionarios[n].id = n + 1;
@@ -108,7 +106,7 @@ int verificargestor(){
     int verific1 = strcmp(senha, senhalogin);
     int verific2 = strcmp(nome, nomelogin);
     
-    if(verific1 == 0 && verific2 == 0)
+    if(verific1 >= 0 && verific2 >= 0)
         {printf("Login correto");
         return 0;}
     else{
