@@ -1,3 +1,8 @@
+Fluxograma: 
+
+ <img width="1118" height="759" alt="image" src="https://github.com/user-attachments/assets/c45552e2-6700-4c9e-a639-33fdad9794cd" />
+
+
 Sobre o programa:
 O programa é dividido em 3 telas principais:
 1. Tela de Login: O programa permite entrar como dois tipos de
